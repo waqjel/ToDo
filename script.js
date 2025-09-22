@@ -61,10 +61,12 @@ function AddToDo() {
         
         // Add event listener to the delete button
         delBtn.addEventListener("click", function(e) {
+            // The stopPropagation() method prevents propagation of the same event from being called.
+            // Propagation means bubbling up to parent elements or capturing down to child elements.
             e.stopPropagation();
             
             // Check if the item is completed and update count if needed
-            if (listItem.classList.contains("completed")) {
+            if(listItem.getAttribute("class") == "completed"){
                 completedCount--;
                 label.innerHTML = `${completedCount} färdiga`;
             }
@@ -98,21 +100,24 @@ function AddToDo() {
         tasksCount++;
         tasksLabel.innerHTML = `${tasksCount} uppgifter`;
         
-        // Add click event to handle the completed tasks
+        // Add click event to handle the completed tasks. Can add and remove the tasks completed.
+        //The counter increases when the task is completed and decreases when unselecting the task.
         listItem.addEventListener("click", function() {
-            if (listItem.classList.contains("completed")) {
-                listItem.classList.remove("completed");
+            if(listItem.getAttribute("class") == "completed"){
+                listItem.setAttribute("class", "");
                 completedCount--;
                 changeStatus(itemLabel.textContent, false);
-            } else {
-                listItem.classList.add("completed");
+            } 
+            else {
+                listItem.setAttribute("class", "completed");
                 completedCount++;
                 changeStatus(itemLabel.textContent, true);
             }
-            label.innerHTML = `${completedCount} färdiga`;
+        
+        label.innerHTML = `${completedCount} färdiga`;
         });
         
-        // Clear input field after the task is added
+        // Clear input field after the task is added. When the input field is clicked it focuses by highlighting the input field.
         todoInput.value = '';
         todoInput.focus();
     }
