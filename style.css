@@ -1,0 +1,169 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items:flex-start;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 140, 255, 0.2);
+            width: 100%;
+            max-width: 450px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1187cb;;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        #clearAll{
+            background-color: #fa2c2c;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        #clearAll:hover{
+            background-color: #009e84;
+
+        }    
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        input {
+            flex: 1;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            
+        }
+        
+        input:focus {
+            border-color: #11a0cb;
+        }
+        
+        #toDoBtn {
+            background-color: #1187cb;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+        
+        #toDoBtn:hover {
+            background-color: #0fb869;
+        }
+        
+        small {
+            color: #e74c3c;
+            display: block;
+            margin-top: -15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        #toDoItem {
+            list-style-type: none;
+            margin-top: 100px;
+        }
+        
+        #toDoItem li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transition: all 0.3s;
+            border: 0.5px dotted #aee0f7;
+        }
+        
+        #toDoItem li:hover {
+            background-color: #00b82b;
+            color: #ffffff;
+        }
+        
+        #toDoItem li.completed span {
+            text-decoration: line-through;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        #toDoItem li.completed {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        
+        .deleteBtn {
+            background-color: #a00212;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 1px 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 30px;
+          
+        }
+        
+        .deleteBtn:hover {
+            background-color: #ff0019;
+        }
+        
+        .results {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 20px 0;
+            padding: 14px;
+            border-top: 1px solid #ddd;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .completedCount {
+            font-weight: 600;
+            color: #28b10d;
+        }
+        
+        .tasks {
+            font-weight: 600;
+            color: #ff780a;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            padding: 10px;
+            color: #e9ecef;
+            background-color: #1765aa;
+        }
+    
